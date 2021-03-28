@@ -11,6 +11,7 @@ import { ContextoTema } from "./contexto/contextoTema";
 
 function App() {
   const {tema} = useContext(ContextoTema)
+  
   return (
     <BrowserRouter>
       <ContenedorPrincipal>
@@ -32,13 +33,13 @@ function App() {
 }
 
 const ContenedorPrincipal = styled.div`
-font-size: ${(props)=>props.tema ? props.tema.fuente + "px" : "16px"}
-text-alingn: ${(props)=>props.tema ? props.tema.alineado : "right"}
     padding: 40px;
     width:90%;
     max-width:700px;
 `;
 const Main = styled.main`
+    font-size: ${props => props.tema ? props.tema.fuente + 'px' : '16px'};
+    text-align: ${props=>props.tema ? props.tema.alineado : "right"};
     background: #fff;
     padding: 40px;
     border-radius:10px;

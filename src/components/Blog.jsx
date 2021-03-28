@@ -1,9 +1,11 @@
-import React,{useContext} from "react";
+import React from "react";
 import {Link } from 'react-router-dom';
 import posts from './../data/posts'
+import Controles from "./Controles";
+
 
 function Blog() {
-  
+
   return (
     <div>
       <h2>BLog</h2>
@@ -14,6 +16,7 @@ function Blog() {
       
        
       </ul>
+      <Controles/>
     </div>
   );
 }
